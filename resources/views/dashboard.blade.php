@@ -24,7 +24,9 @@
                     <td>Kata</td>
                     <td>Rp.99.000</td>
                     <td>Rintik Sedu</td>
-                    <td>kata.jpg</td>
+                    <td>
+                        <img src="storage/kata.png" alt="" class="sr">
+                    </td>
                     <td>
                         <input type="button" value="edit" class="btn btn-warning" >
                         <input type="button" value="hapus" class="btn btn-danger">
