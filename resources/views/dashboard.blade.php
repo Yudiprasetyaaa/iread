@@ -25,7 +25,7 @@
                     <td>{{$product->nama}}</td>
                     <td>{{$product->deskripsi}}</td>
                     <td>
-                        <input type="button" value="edit" class="btn btn-warning" >
+                        <input type="button" value="edit" class="btn btn-warning">
                         <input type="button" value="hapus" class="btn btn-danger">
                     </td>
                 </tr>

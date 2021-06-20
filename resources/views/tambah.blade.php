@@ -11,12 +11,12 @@
     <div class="card">
         <div class="card-body">
             <h3>Add Books</h3>
-            <form action="#" method="POST">
+            <form action="{{route('book.store')}}" method="POST">
+                @csrf
                 <ul class="list-group">
-                    Name <input type="text" name="name" required>
-                    Price <input type="text" name="price" required>
-                    Author <input type="text" name="author" required>
-                    Picture <input type="text" name="picture" required>
+                    Kode Produk <input type="text" name="KodeProduk" required>
+                    Nama <input type="text" name="nama" required>
+                    Deskripsi <input type="text" name="desc" required>
                 </ul>
                 <hr>
                 <a href="{{route('book.index')}}">kembali</a>

@@ -37,7 +37,13 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Product::create([
+            "kode_produk" => $request->KodeProduk,
+            "nama"        => $request->nama,
+            "deskripsi"   => $request->desc,
+        ]);
+
+        return redirect()->route('book.index');
     }
 
     /**
