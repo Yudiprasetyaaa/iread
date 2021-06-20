@@ -14,24 +14,22 @@
             <a href="{{route('book.create')}}"> Add Book </a>
             <table class="table table-bordered table-striped">
                 <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Author</th>
-                    <th>Pict</th>
-                    <th>Action</th>
+                    <th>Kode Produk</th>
+                    <th>Nama</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
                 </tr>
-                 <tr>
-                    <td>Kata</td>
-                    <td>Rp.99.000</td>
-                    <td>Rintik Sedu</td>
-                    <td>
-                        <img src="storage/kata.png" alt="" class="sr">
-                    </td>
+                @foreach ($products as $product)
+                <tr>
+                    <td>{{$product->kode_produk}}</td>
+                    <td>{{$product->nama}}</td>
+                    <td>{{$product->deskripsi}}</td>
                     <td>
                         <input type="button" value="edit" class="btn btn-warning" >
                         <input type="button" value="hapus" class="btn btn-danger">
                     </td>
                 </tr>
+                @endforeach
             </table>
         </div>
     </div>

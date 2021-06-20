@@ -12,7 +12,7 @@
       </style>
 </head>
 <body>
-    @extends('template')
+    @extends('layouts.app')
 
     @section('content')
     <div class="row">

@@ -28,3 +28,6 @@ Route::get('/biografi-buku', [MenuController::class, 'biografi']);
 Route::get('/profil', [MenuController::class, 'aboutus']);
 
 Route::resource ('/book', (BookController::class));
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
