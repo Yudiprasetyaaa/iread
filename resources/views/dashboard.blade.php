@@ -25,7 +25,7 @@
                     <td>{{$product->nama}}</td>
                     <td>{{$product->deskripsi}}</td>
                     <td>
-                        <input type="button" value="edit" class="btn btn-warning">
+                        <a href="{{route('book.edit', $product->id)}}" class="btn btn-warning">Edit</a>
                         <input type="button" value="hapus" class="btn btn-danger">
                     </td>
                 </tr>
