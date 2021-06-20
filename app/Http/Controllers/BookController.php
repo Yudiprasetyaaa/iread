@@ -79,7 +79,14 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dataProduct = Product::find($id);
+
+        $dataProduct->kode_produk = $request->kodeProduk;
+        $dataProduct->nama        = $request->nama;
+        $dataProduct->deskripsi   = $request->desc;
+        $dataProduct->save();
+
+        return redirect()->route('book.index');
     }
 
     /**
@@ -90,6 +97,9 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dataProduct = Product::find($id);
+        $dataProduct->delete();
+
+        return redirect()->route('book.index');
     }
 }

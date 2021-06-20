@@ -26,7 +26,11 @@
                     <td>{{$product->deskripsi}}</td>
                     <td>
                         <a href="{{route('book.edit', $product->id)}}" class="btn btn-warning">Edit</a>
-                        <input type="button" value="hapus" class="btn btn-danger">
+                        <form action="{{route('book.destroy', $product->id)}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
